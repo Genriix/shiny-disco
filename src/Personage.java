@@ -90,6 +90,7 @@ public class Personage {
     public void UseNewArmor() {
         this.BaseArmor += 20;
         this.Armor = this.BaseArmor;
+        System.out.println("<<Персонаж " + this.Name + " применил улучшенный комплект брони!");
     }
 
     public void ShowStats() {
