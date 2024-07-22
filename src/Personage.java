@@ -15,6 +15,7 @@ public class Personage {
 
     public Personage(String name) {
         this.Name = name;
+        System.out.println("Персонаж " + this.Name + " добавился в игру!");
     }
 
     public static Personage Create(String name) {
@@ -35,6 +36,12 @@ public class Personage {
     public void LiteSwordAttack(Personage target) {
         System.out.println("<< Персонаж " + this.Name + " совершает лёгкую атаку мечом на персонажа " + target.Name + "!");
         target.DodgeAttack(25);
+    }
+
+    public void LiteAttack(Personage target, Weapon weapon) {
+        System.out.println("<< Персонаж " + this.Name + " совершает лёгкую атаку оружием " + weapon.GetName() +
+                " по персонажу " + target.Name + "!");
+        target.DodgeAttack(weapon.GetAttack());
     }
 
     public void DodgeAttack(int attackPower) {
